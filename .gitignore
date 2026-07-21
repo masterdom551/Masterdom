@@ -1,9 +1,3 @@
-cat > .gitignore <<'EOF'
-# ==========================
-# Masterdom
-# Git Ignore
-# ==========================
-
 # Build
 bin/
 obj/
@@ -15,34 +9,28 @@ TestResults/
 # IDE
 .vs/
 .idea/
-
-# VS Code
-.vscode/*.code-workspace
+.vscode/
 
 # Rider
 *.sln.iml
 
-# User files
+# User
 *.user
 *.suo
 
 # macOS
 .DS_Store
 
-# Temporary
-temp/
-
 # Logs
 *.log
-
-# NuGet
-*.nupkg
 
 # Coverage
 coverage/
 
-# Local Database
+# NuGet
+*.nupkg
+
+# Databases
 *.db
 *.sqlite
 *.sqlite3
-EOF
