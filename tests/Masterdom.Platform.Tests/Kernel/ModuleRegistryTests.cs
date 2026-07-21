@@ -1,5 +1,5 @@
 using Masterdom.Platform.Modules;
-using Masterdom.Platform.Tests.TestDoubles;
+using Masterdom.TestKit.Platform;
 using Xunit;
 
 namespace Masterdom.Platform.Tests.Kernel;
