@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Masterdom.Platform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0afaafdcfed399772b598a758620bbce4601980f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d191bb24e9fd44bc44d47a1cc8dabfdd829093")]
 [assembly: System.Reflection.AssemblyProductAttribute("Masterdom.Platform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Masterdom.Platform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
