@@ -16,7 +16,6 @@
     <Project Path="src/Masterdom.Modules.Reporting/Masterdom.Modules.Reporting.csproj" />
     <Project Path="src/Masterdom.Modules.Security/Masterdom.Modules.Security.csproj" />
     <Project Path="src/Masterdom.Modules.Settings/Masterdom.Modules.Settings.csproj" />
-    <Project Path="src/Masterdom.Platform/Masterdom.Platform.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Masterdom.Architecture.Tests/Masterdom.Architecture.Tests.csproj" />

@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Masterdom.Core\Masterdom.Core.csproj" />
-    <ProjectReference Include="..\..\src\Masterdom.Platform\Masterdom.Platform.csproj" />
   </ItemGroup>
 
 </Project>
