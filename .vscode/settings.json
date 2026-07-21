@@ -1,0 +1,43 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        120
+    ],
+    "editor.renderWhitespace": "selection",
+    "editor.minimap.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "off",
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "docker.languageserver.formatter.ignoreMultilineInstructions": false,
+    "yaml.format.enable": true,
+    "xml.format.enabled": true,
+    "markdown.extension.toc.levels": "2..4",
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "BUG",
+        "OPTIMIZE",
+        "NOTE",
+        "MASTERDOM"
+    ],
+    "errorLens.enabled": true,
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.statusBarMessageEnabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+    "dotnet.codeLens.enableReferencesCodeLens": true,
+    "workbench.iconTheme": "vs-seti",
+    "extensions.ignoreRecommendations": false
+}

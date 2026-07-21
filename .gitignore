@@ -1,0 +1,48 @@
+cat > .gitignore <<'EOF'
+# ==========================
+# Masterdom
+# Git Ignore
+# ==========================
+
+# Build
+bin/
+obj/
+artifacts/
+
+# Test
+TestResults/
+
+# IDE
+.vs/
+.idea/
+
+# VS Code
+.vscode/*.code-workspace
+
+# Rider
+*.sln.iml
+
+# User files
+*.user
+*.suo
+
+# macOS
+.DS_Store
+
+# Temporary
+temp/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+
+# Coverage
+coverage/
+
+# Local Database
+*.db
+*.sqlite
+*.sqlite3
+EOF

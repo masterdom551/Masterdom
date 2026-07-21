@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-azuretools.vscode-docker",
+        "GitHub.vscode-github-actions",
+        "EditorConfig.EditorConfig",
+        "usernamehw.errorlens",
+        "Gruntfuggly.todo-tree",
+        "yzhang.markdown-all-in-one",
+        "PKief.material-icon-theme",
+        "redhat.vscode-yaml",
+        "redhat.vscode-xml",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

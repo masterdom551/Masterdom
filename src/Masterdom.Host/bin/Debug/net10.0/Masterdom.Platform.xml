@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Masterdom.Platform</name>
+    </assembly>
+    <members>
+        <member name="T:Masterdom.Platform.Core.IPlatformContext">
+            <summary>
+            Provides access to platform services available to modules.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Core.IPlatformContext.Modules">
+            <summary>
+            Gets the read-only catalog of loaded modules.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Core.Kernel">
+            <summary>
+            Represents the Masterdom platform kernel.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Core.Kernel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Masterdom.Platform.Core.Kernel"/> class.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Core.Kernel.State">
+            <summary>
+            Gets the current kernel state.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Core.Kernel.Context">
+            <summary>
+            Gets the platform context.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Core.Kernel.LoadModule(Masterdom.Platform.Modules.IModule)">
+            <summary>
+            Loads a module into the platform.
+            </summary>
+            <param name="module">The module to load.</param>
+        </member>
+        <member name="M:Masterdom.Platform.Core.Kernel.Start">
+            <summary>
+            Starts the platform kernel.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Core.Kernel.Stop">
+            <summary>
+            Stops the platform kernel.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Core.KernelState">
+            <summary>
+            Represents the lifecycle state of the platform kernel.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Created">
+            <summary>
+            The kernel has been created but has not started.
+            Modules may still be loaded.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Starting">
+            <summary>
+            The kernel is starting.
+            Modules are being registered and initialized.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Running">
+            <summary>
+            The kernel is fully started and running.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Faulted">
+            <summary>
+            The kernel encountered an unrecoverable error during startup
+            or execution and is no longer in a valid operational state.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Stopping">
+            <summary>
+            The kernel is shutting down.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.KernelState.Stopped">
+            <summary>
+            The kernel has been shut down.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Core.PlatformContext">
+            <summary>
+            Represents the platform context that is shared with modules.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Core.PlatformContext.#ctor(Masterdom.Platform.Modules.IModuleCatalog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Masterdom.Platform.Core.PlatformContext"/> class.
+            </summary>
+            <param name="modules">The platform module catalog.</param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="modules"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="P:Masterdom.Platform.Core.PlatformContext.Modules">
+            <inheritdoc/>
+        </member>
+        <member name="T:Masterdom.Platform.Core.PlatformVersion">
+            <summary>
+            Represents the current version of the Masterdom platform.
+            </summary>
+        </member>
+        <member name="F:Masterdom.Platform.Core.PlatformVersion.Current">
+            <summary>
+            Current platform version.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Diagnostics.ConsoleDiagnostics">
+            <summary>
+            Writes diagnostics to the console.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Diagnostics.DiagnosticEntry">
+            <summary>
+            Represents a single diagnostic event.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Diagnostics.DiagnosticEntry.TimestampUtc">
+            <summary>
+            Gets the UTC timestamp.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Diagnostics.DiagnosticEntry.Severity">
+            <summary>
+            Gets the severity.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Diagnostics.DiagnosticEntry.Source">
+            <summary>
+            Gets the component generating the event.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Diagnostics.DiagnosticEntry.Message">
+            <summary>
+            Gets the message.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Diagnostics.DiagnosticEntry.Exception">
+            <summary>
+            Gets the associated exception.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Diagnostics.DiagnosticSeverity">
+            <summary>
+            Represents the severity of a diagnostic entry.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Diagnostics.IDiagnostics">
+            <summary>
+            Writes diagnostic events.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.IModule">
+            <summary>
+            Defines the contract for a platform module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModule.Metadata">
+            <summary>
+            Gets the module metadata.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModule.Initialize(Masterdom.Platform.Core.IPlatformContext)">
+            <summary>
+            Initializes the module.
+            </summary>
+            <param name="context">The platform context.</param>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModule.Shutdown(Masterdom.Platform.Core.IPlatformContext)">
+            <summary>
+            Shuts down the module.
+            </summary>
+            <param name="context">The platform context.</param>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.IModuleCatalog">
+            <summary>
+            Represents a read-only catalog of platform modules.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleCatalog.Count">
+            <summary>
+            Gets the number of registered modules.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModuleCatalog.Contains(System.String)">
+            <summary>
+            Determines whether a module exists.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModuleCatalog.Get(System.String)">
+            <summary>
+            Gets a module by identifier.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModuleCatalog.TryGet(System.String,Masterdom.Platform.Modules.IModule@)">
+            <summary>
+            Attempts to retrieve a module.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.IModuleLoader">
+            <summary>
+            Defines the contract for loading modules into the platform.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModuleLoader.Load(Masterdom.Platform.Modules.IModule,Masterdom.Platform.Modules.IModuleRegistry)">
+            <summary>
+            Loads a module into the specified registry.
+            </summary>
+            <param name="module">The module to load.</param>
+            <param name="registry">The target registry.</param>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.IModuleMetadata">
+            <summary>
+            Represents the immutable metadata that describes a platform module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleMetadata.Id">
+            <summary>
+            Gets the unique, stable identifier of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleMetadata.Name">
+            <summary>
+            Gets the technical name of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleMetadata.DisplayName">
+            <summary>
+            Gets the user-friendly display name of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleMetadata.Version">
+            <summary>
+            Gets the module version.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.IModuleMetadata.Description">
+            <summary>
+            Gets the module description.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.IModuleRegistry">
+            <summary>
+            Represents the writable platform module registry.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.IModuleRegistry.Register(Masterdom.Platform.Modules.IModule)">
+            <summary>
+            Registers a module.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.ModuleBase">
+            <summary>
+            Provides a base implementation of <see cref="T:Masterdom.Platform.Modules.IModule"/>.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleBase.#ctor(Masterdom.Platform.Modules.IModuleMetadata)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Masterdom.Platform.Modules.ModuleBase"/> class.
+            </summary>
+            <param name="metadata">The module metadata.</param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="metadata"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleBase.Metadata">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleBase.Initialize(Masterdom.Platform.Core.IPlatformContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleBase.Shutdown(Masterdom.Platform.Core.IPlatformContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.ModuleDescriptor">
+            <summary>
+            Represents the metadata describing a platform module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleDescriptor.Id">
+            <summary>
+            Gets the unique, stable identifier of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleDescriptor.Name">
+            <summary>
+            Gets the technical name of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleDescriptor.DisplayName">
+            <summary>
+            Gets the user-friendly display name of the module.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleDescriptor.Version">
+            <summary>
+            Gets the module version.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleDescriptor.Description">
+            <summary>
+            Gets the module description.
+            </summary>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.ModuleLoader">
+            <summary>
+            Default implementation of <see cref="T:Masterdom.Platform.Modules.IModuleLoader"/>.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleLoader.Load(Masterdom.Platform.Modules.IModule,Masterdom.Platform.Modules.IModuleRegistry)">
+            <inheritdoc />
+        </member>
+        <member name="T:Masterdom.Platform.Modules.ModuleRegistry">
+            <summary>
+            Stores platform modules.
+            </summary>
+        </member>
+        <member name="P:Masterdom.Platform.Modules.ModuleRegistry.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleRegistry.Contains(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleRegistry.Get(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleRegistry.TryGet(System.String,Masterdom.Platform.Modules.IModule@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleRegistry.Register(Masterdom.Platform.Modules.IModule)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.ModuleRegistry.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:Masterdom.Platform.Modules.PlatformModule">
+            <summary>
+            Represents the base class for built-in platform modules.
+            </summary>
+        </member>
+        <member name="M:Masterdom.Platform.Modules.PlatformModule.#ctor(Masterdom.Platform.Modules.IModuleMetadata)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Masterdom.Platform.Modules.PlatformModule"/> class.
+            </summary>
+            <param name="metadata">The module metadata.</param>
+        </member>
+    </members>
+</doc>

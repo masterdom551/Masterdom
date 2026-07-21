@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Masterdom.Host/1.0.0": {
+        "dependencies": {
+          "Masterdom.Platform": "1.0.0"
+        },
+        "runtime": {
+          "Masterdom.Host.dll": {}
+        }
+      },
+      "Masterdom.Abstractions/1.0.0": {
+        "dependencies": {
+          "Masterdom.Core": "1.0.0"
+        },
+        "runtime": {
+          "Masterdom.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Masterdom.Core/1.0.0": {
+        "runtime": {
+          "Masterdom.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Masterdom.Platform/1.0.0": {
+        "dependencies": {
+          "Masterdom.Abstractions": "1.0.0",
+          "Masterdom.Core": "1.0.0"
+        },
+        "runtime": {
+          "Masterdom.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Masterdom.Host/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Masterdom.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Masterdom.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Masterdom.Platform/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
